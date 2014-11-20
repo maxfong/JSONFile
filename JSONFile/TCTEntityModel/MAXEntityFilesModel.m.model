@@ -1,0 +1,15 @@
+//
+//  ___COMPLIEFILENAME___
+//  ___PROJECTNAME___
+//
+//  Auto Created by maxfong's UtilityTools on ___DATE___.
+//  Operation Person Name is ___USERNAME___
+//  ___COPYRIGHT___
+//
+
+#import "___FILEBASENAME___.h"
+
+@implementation ___FILENAMEASIDENTIFIER___
+
+___INIT___
+@end
