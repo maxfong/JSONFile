@@ -27,6 +27,7 @@
 		A903082519E6E30F009577B8 /* MAXRequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A903082119E6E30F009577B8 /* MAXRequestController.m */; };
 		A903082919E6E350009577B8 /* NSString+UnicodeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A903082819E6E350009577B8 /* NSString+UnicodeConvert.m */; };
 		A903082A19E6E350009577B8 /* NSString+UnicodeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A903082819E6E350009577B8 /* NSString+UnicodeConvert.m */; };
+		A9A0BAA61A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A0BAA51A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.m */; };
 		A9AD053E19CAA81D00C516E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AD053D19CAA81D00C516E7 /* Cocoa.framework */; };
 		A9AD054819CAA81D00C516E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9AD054619CAA81D00C516E7 /* InfoPlist.strings */; };
 		A9AD054A19CAA81D00C516E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AD054919CAA81D00C516E7 /* main.m */; };
@@ -69,6 +70,8 @@
 		A903082119E6E30F009577B8 /* MAXRequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAXRequestController.m; sourceTree = "<group>"; };
 		A903082719E6E350009577B8 /* NSString+UnicodeConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UnicodeConvert.h"; sourceTree = "<group>"; };
 		A903082819E6E350009577B8 /* NSString+UnicodeConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UnicodeConvert.m"; sourceTree = "<group>"; };
+		A9A0BAA41A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MAXTheFirstLetter.h"; sourceTree = "<group>"; };
+		A9A0BAA51A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MAXTheFirstLetter.m"; sourceTree = "<group>"; };
 		A9AD053A19CAA81D00C516E7 /* JSONFile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONFile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AD053D19CAA81D00C516E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A9AD054019CAA81D00C516E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 			children = (
 				A903082719E6E350009577B8 /* NSString+UnicodeConvert.h */,
 				A903082819E6E350009577B8 /* NSString+UnicodeConvert.m */,
+				A9A0BAA41A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.h */,
+				A9A0BAA51A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			files = (
 				A9AD054A19CAA81D00C516E7 /* main.m in Sources */,
 				A903081819E6E2FA009577B8 /* MAXEntityModelCreate.m in Sources */,
+				A9A0BAA61A1F243200C9AEF4 /* NSString+MAXTheFirstLetter.m in Sources */,
 				A903082419E6E30F009577B8 /* MAXRequestController.m in Sources */,
 				A903082219E6E30F009577B8 /* MAXPluginController.m in Sources */,
 				A903081C19E6E2FA009577B8 /* MAXProtocolEngine.m in Sources */,

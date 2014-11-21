@@ -80,12 +80,12 @@ NSString *const MAXModelFileInitKey = @"MAXInit";
     {
         case ___HEADFILENAME___:
         {
-            return [NSString stringWithFormat:@"%@%@.h", [options[MAXModelFilePrefixKey] capitalizedString] ?: @"", [options[MAXModelFileServerNameKey] capitalizedString] ?: @"<#serverName#>"];
+            return [NSString stringWithFormat:@"%@%@.h", [options[MAXModelFilePrefixKey] fristLetterString] ?: @"", [options[MAXModelFileServerNameKey] fristLetterString] ?: @"<#serverName#>"];
         }
             break;
         case ___COMPLIEFILENAME___:
         {
-            return [NSString stringWithFormat:@"%@%@.m", [options[MAXModelFilePrefixKey] capitalizedString] ?: @"", [options[MAXModelFileServerNameKey] capitalizedString] ?: @"<#serverName#>"];
+            return [NSString stringWithFormat:@"%@%@.m", [options[MAXModelFilePrefixKey] fristLetterString] ?: @"", [options[MAXModelFileServerNameKey] fristLetterString] ?: @"<#serverName#>"];
         }
             break;
         case ___PROJECTNAME___:
@@ -197,7 +197,7 @@ NSString *const MAXModelFileInitKey = @"MAXInit";
 
 + (NSString *)importStringsWithDictionary:(NSDictionary *)dictionary className:(NSString *)className fileModel:(MAXFileEntityModel)fileModel options:(NSDictionary *)options
 {
-    __block NSMutableString *objectString = [[NSString stringWithFormat:@"\n#import \"%@.h\"", [className capitalizedString]] mutableCopy];
+    __block NSMutableString *objectString = [[NSString stringWithFormat:@"\n#import \"%@.h\"", [className fristLetterString]] mutableCopy];
     {
         NSDictionary *subClassOptions = @{MAXModelFileServerNameKey : className,
                                           MAXModelFileInitKey : @""};

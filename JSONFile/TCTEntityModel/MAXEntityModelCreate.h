@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MAXEntityModelReplace.h"
+#import "NSString+MAXTheFirstLetter.h"
 
 typedef NS_ENUM(NSUInteger, MAXSearchPathDirectory)
 {

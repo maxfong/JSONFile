@@ -71,12 +71,7 @@
 
 + (NSString *)fileNameWithModel:(MAXFileEntityModel)model options:(NSDictionary *)options
 {
-    NSString *fileName = options[MAXModelFileServerNameKey];
-    NSString *className = [fileName capitalizedString];
-    if ([fileName length] > 1) {
-        className = [[[fileName substringToIndex:1] uppercaseString] stringByAppendingString:[fileName substringWithRange:NSMakeRange(1, fileName.length - 1)]];
-    }
-    return [NSString stringWithFormat:@"%@%@.%c", [options[MAXModelFilePrefixKey] capitalizedString] ?: @"", className ?: @"Demo", (char)model];
+    return [NSString stringWithFormat:@"%@%@.%c", [options[MAXModelFilePrefixKey] capitalizedString] ?: @"", [options[MAXModelFileServerNameKey] fristLetterString] ?: @"Demo", (char)model];
 }
 
 @end
