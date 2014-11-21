@@ -14,6 +14,7 @@
     IBOutlet NSTextField    *txtfServerName;
     IBOutlet NSTextView     *txtvRequestInput;
     IBOutlet NSTextView     *txtvResponseOutput;
+    IBOutlet NSTextField    *txtfConsole;
 }
 
 - (IBAction)didPressedSubmitRequest:sender;

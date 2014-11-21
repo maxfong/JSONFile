@@ -184,15 +184,15 @@ NSString *const MAXModelFileInitKey = @"MAXInit";
 
 + (NSString *)propertyStringWithStringName:(NSString *)propertyName
 {
-    return [NSString stringWithFormat:@"@property (nonatomic, retain) NSString *%@;\n", propertyName];
+    return [NSString stringWithFormat:@"@property (nonatomic, strong) NSString *%@;\n", propertyName];
 }
 + (NSString *)propertyStringWithArrayName:(NSString *)propertyName
 {
-    return [NSString stringWithFormat:@"@property (nonatomic, retain) NSMutableArray *%@;\n", propertyName];
+    return [NSString stringWithFormat:@"@property (nonatomic, strong) NSMutableArray *%@;\n", propertyName];
 }
 + (NSString *)propertyStringWithDictionaryName:(NSString *)propertyName
 {
-    return [NSString stringWithFormat:@"@property (nonatomic, retain) %@ *%@;\n", propertyName, propertyName];
+    return [NSString stringWithFormat:@"@property (nonatomic, strong) %@ *%@;\n", propertyName, propertyName];
 }
 
 + (NSString *)importStringsWithDictionary:(NSDictionary *)dictionary className:(NSString *)className fileModel:(MAXFileEntityModel)fileModel options:(NSDictionary *)options

@@ -17,10 +17,11 @@
     {
         return nil;
     }
-    NSString *replaceString = [self compressJSONString:jsonString];
-    NSData *JSONData = [replaceString dataUsingEncoding:NSUnicodeStringEncoding];
+    NSString *replaceString = [self replaceJSONString:jsonString];
+    NSString *compressString = [self compressJSONString:replaceString];
+    NSData *JSONData = [compressString dataUsingEncoding:NSUnicodeStringEncoding];
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:JSONData
-                                                               options:NSJSONReadingMutableLeaves
+                                                               options:NSJSONReadingAllowFragments
                                                                  error:error];
     return dictionary;
 }
@@ -35,17 +36,6 @@
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ?: nil;
 }
 
-+ (BOOL)validityJSONString:(NSString *)jsonString error:(NSError **)error
-{
-    BOOL hasIntValue = [self validityIntValueWithJSONString:jsonString error:error];
-    if (hasIntValue)
-    {
-        return NO;
-    }
-    NSDictionary *dictionary = [self dictionaryWithJSONString:jsonString error:error];
-    return (dictionary ? YES : NO);
-}
-
 + (BOOL)validityIntValueWithJSONString:(NSString *)jsonString error:(NSError **)error
 {
     NSString *regex = @"\"\\s?:\\s?[0-9]";
@@ -57,7 +47,6 @@
         {
             *error = [NSError errorWithDomain:@"" code:0 userInfo:@{@"NSDebugDescription": description}];
         }
-        
         return YES;
     }
     return NO;
@@ -134,8 +123,25 @@
     {
         resultString = [resultString stringByReplacingOccurrencesOfString:obj withString:@""];
     }];
-    resultString = [resultString stringByReplacingOccurrencesOfString:@"\\" withString:@"\\\\"];
     
+    return resultString;
+}
+
++ (NSString *)replaceJSONString:(NSString *)JSONString
+{
+    NSString *resultString = JSONString;
+    resultString = [resultString stringByReplacingOccurrencesOfString:@"“" withString:@"u201c"];
+    resultString = [resultString stringByReplacingOccurrencesOfString:@"\\\"" withString:@"u5cu22"];
+    resultString = [resultString stringByReplacingOccurrencesOfString:@"\\" withString:@"u5c"];
+    return resultString;
+}
+
++ (NSString *)reNewRealJSONString:(NSString *)JSONString
+{
+    NSString *resultString = JSONString;
+    resultString = [resultString stringByReplacingOccurrencesOfString:@"u201c" withString:@"“"];
+    resultString = [resultString stringByReplacingOccurrencesOfString:@"u5cu22" withString:@"\\\""];
+    resultString = [resultString stringByReplacingOccurrencesOfString:@"u5c" withString:@"\\"];
     return resultString;
 }
 
@@ -239,7 +245,7 @@
         }
     }];
     
-    return string;
+    return [self reNewRealJSONString:string];
 }
 
 @end

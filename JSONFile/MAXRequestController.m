@@ -165,16 +165,16 @@
 
 - (void)createEntityWithDictionary:(NSDictionary *)dictionary model:(MAXFileEntityModel)model prefix:(NSString *)prefix superClass:(NSString *)superClass
 {
+    NSError *error = nil;
     if (dictionary)
     {
         [MAXEntityModelOperation createEntityFileWithDictionary:dictionary
                                                           model:model
                                                       directory:MAXUserDesktopDirectory
                                                         options:[self optionsDictionaryWithPrefix:prefix model:model superClass:superClass]
-                                                          error:nil];
-        NSAlert *alert = [NSAlert alertWithMessageText:@"提示" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@"生成成功！", nil];
-        [alert beginSheetModalForWindow:nil modalDelegate:nil didEndSelector:nil contextInfo:nil];
+                                                          error:&error];
     }
+    [txtfConsole setStringValue:(error ? @"fail" : @"success")];
 }
 
 @end

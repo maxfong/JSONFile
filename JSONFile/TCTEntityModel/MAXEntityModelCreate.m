@@ -44,15 +44,14 @@
 
 + (NSString *)saveFileDirectory
 {
-    //TODO:Save Path
-    return [NSString stringWithFormat:@"/Users/%@/Desktop/MAXEntityFiles", NSUserName()];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
+    return [NSString stringWithFormat:@"%@/MAXEntityFiles", paths[0]];
 }
 
 + (NSString *)modelFilePathWithModel:(MAXFileEntityModel)model options:(NSDictionary *)options
 {
     NSString *modelName = [self modelNameWithModel:model options:options];
-    //TODO:Resources Path
-    return [NSString stringWithFormat:@"/Users/%@/Library/Application Support/Developer/Shared/Xcode/Plug-ins/UtilityTools.xcplugin/Contents/Resources/%@", NSUserName(), modelName];
+    return [[NSBundle mainBundle] pathForResource:modelName ofType:@"model"];
 }
 
 //通过服务名和模型确定文件名称和路径
@@ -67,12 +66,17 @@
 {
     //TIP:
     //you can use options[MAXModelFilePrefixKey] create different model
-    return [NSString stringWithFormat:@"MAXEntityFilesModel.%c.model", (char)model];
+    return [NSString stringWithFormat:@"MAXEntityFilesModel.%c", (char)model];
 }
 
 + (NSString *)fileNameWithModel:(MAXFileEntityModel)model options:(NSDictionary *)options
 {
-    return [NSString stringWithFormat:@"%@%@.%c", [options[MAXModelFilePrefixKey] capitalizedString] ?: @"", [options[MAXModelFileServerNameKey] capitalizedString] ?: @"Demo", (char)model];
+    NSString *fileName = options[MAXModelFileServerNameKey];
+    NSString *className = [fileName capitalizedString];
+    if ([fileName length] > 1) {
+        className = [[[fileName substringToIndex:1] uppercaseString] stringByAppendingString:[fileName substringWithRange:NSMakeRange(1, fileName.length - 1)]];
+    }
+    return [NSString stringWithFormat:@"%@%@.%c", [options[MAXModelFilePrefixKey] capitalizedString] ?: @"", className ?: @"Demo", (char)model];
 }
 
 @end

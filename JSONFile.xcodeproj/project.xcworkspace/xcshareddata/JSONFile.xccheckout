@@ -8,27 +8,27 @@
 	<string>E98BD619-1AFD-4EDC-AD77-BF15143D8E9E</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BFE4E5A5BED20C4BFE5CB3919EB0F27E4BD6F74F</key>
+		<key>BEDED3A40BD1BC5912082D3EF76A1EC736A61BDC</key>
 		<string>https://github.com/maxfong/JSONFile.git</string>
 	</dict>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BFE4E5A5BED20C4BFE5CB3919EB0F27E4BD6F74F</key>
-		<string>JSONFile/</string>
+		<key>BEDED3A40BD1BC5912082D3EF76A1EC736A61BDC</key>
+		<string>JSONFile</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/maxfong/JSONFile.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BFE4E5A5BED20C4BFE5CB3919EB0F27E4BD6F74F</string>
+	<string>BEDED3A40BD1BC5912082D3EF76A1EC736A61BDC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BFE4E5A5BED20C4BFE5CB3919EB0F27E4BD6F74F</string>
+			<string>BEDED3A40BD1BC5912082D3EF76A1EC736A61BDC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JSONFile</string>
 		</dict>

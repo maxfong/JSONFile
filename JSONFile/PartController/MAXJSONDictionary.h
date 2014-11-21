@@ -31,15 +31,6 @@
 + (NSString *)JSONStringWithDictionary:(NSDictionary *)dictionary error:(NSError **)error;
 
 /**
- *  检查JSON是否正确
- *
- *  @param jsonString JSON string
- *
- *  @return true is nil
- */
-+ (BOOL)validityJSONString:(NSString *)jsonString error:(NSError **)error;
-
-/**
  *  返回错误描述
  *
  *  @param error error

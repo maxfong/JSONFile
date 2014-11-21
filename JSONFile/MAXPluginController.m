@@ -35,7 +35,7 @@
 {
     if (returnCode == 1)
     {
-        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/maxfong/UtilityTools"]];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/maxfong/JSONFile"]];
     }
 }
 
@@ -43,22 +43,17 @@
 {
     NSString *outputString = txtvConsole.string ?: @"";
     
-    BOOL validity = [MAXJSONDictionary validityJSONString:outputString error:nil];
-    if (validity)
+    NSDictionary *dictionary = [MAXJSONDictionary dictionaryWithJSONString:outputString error:nil];
+    if ([dictionary isKindOfClass:[NSDictionary class]])
     {
-        NSDictionary *dictionary = [MAXJSONDictionary dictionaryWithJSONString:outputString error:nil];
         [txtvConsole setString:[[MAXJSONDictionary stringWithDictionary:dictionary] chineseFromUnicode]];
+        [txtfConsole setStringValue:@"success"];
     }
     else
     {
         NSString *errorMsg = [MAXJSONDictionary JSONSpecificFromError:nil originString:outputString];
-        if ([errorMsg length] > 0)
-        {
-            [txtfConsole setStringValue:errorMsg];
-            return;
-        }
+        [txtfConsole setStringValue:(errorMsg ?: @"fail")];
     }
-    [txtfConsole setStringValue:@"验证通过"];
 }
 
 - (IBAction)didPressedFileCreate:sender
@@ -66,15 +61,18 @@
     NSString *outputString = txtvConsole.string ?: @"";
     NSError *error;
     NSDictionary *dictionary = [MAXJSONDictionary dictionaryWithJSONString:outputString error:&error];
-    if (dictionary)
+    if (error || ![dictionary isKindOfClass:[NSDictionary class]])
+    {
+        [txtfConsole setStringValue:@"fail"];
+    }
+    else
     {
         [MAXEntityModelOperation createEntityFileWithDictionary:dictionary
                                                           model:MAXHeadAndComplieEntity
                                                       directory:MAXUserDesktopDirectory
-                                                        options:@{MAXModelFileServerNameKey : @"MAXTDemo"}
+                                                        options:@{MAXModelFileServerNameKey : @"__main__"}
                                                           error:nil];
-        NSAlert *alert = [NSAlert alertWithMessageText:@"提示" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@"生成成功！", nil];
-        [alert beginSheetModalForWindow:nil modalDelegate:nil didEndSelector:nil contextInfo:nil];
+        [txtfConsole setStringValue:@"success"];
     }
 }
 
