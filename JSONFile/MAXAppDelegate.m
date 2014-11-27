@@ -23,6 +23,10 @@
     [self.statusItem  setMenu:self.menu];
     [self.statusItem  setHighlightMode:YES];
     [self.statusItem  setTitle:@"JSONFile"];
+    
+    [self.windowRequest setLevel:NSNormalWindowLevel];
+    [self.windowConvert setLevel:NSNormalWindowLevel];
+    [self.windowJSON setLevel:NSNormalWindowLevel];
 }
 
 -(IBAction)didPressedQuit:(id)sender

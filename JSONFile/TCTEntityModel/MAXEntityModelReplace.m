@@ -128,7 +128,7 @@ NSString *const MAXModelFileInitKey = @"MAXInit";
             break;
         case ___FILEBASENAME___:
         {
-            return [NSString stringWithFormat:@"%@%@", options[MAXModelFilePrefixKey] ?: @"", options[MAXModelFileServerNameKey] ?: @"<#serverName#>"];
+            return [NSString stringWithFormat:@"%@%@", options[MAXModelFilePrefixKey] ?: @"", [options[MAXModelFileServerNameKey] fristLetterString] ?: @"<#serverName#>"];
         }
             break;
         case ___INIT___:

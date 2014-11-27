@@ -13,11 +13,6 @@
 
 @implementation MAXPluginController
 
--(void)windowDidLoad
-{
-    [super windowDidLoad];
-}
-
 - (IBAction)didPressedConvertChinese:sender
 {
     NSString *input = txtvJSONInput.string ?: @"";

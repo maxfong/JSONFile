@@ -10,4 +10,7 @@
 
 @interface MAXAppDelegate : NSObject <NSApplicationDelegate>
 
+@property (nonatomic, strong) IBOutlet NSWindow       *windowConvert;
+@property (nonatomic, strong) IBOutlet NSWindow       *windowJSON;
+@property (nonatomic, strong) IBOutlet NSWindow       *windowRequest;
 @end
