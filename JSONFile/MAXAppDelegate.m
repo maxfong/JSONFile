@@ -13,23 +13,31 @@
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, strong) IBOutlet NSMenu *menu;
 
+
+
 @end
 
 @implementation MAXAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:70];
-    [self.statusItem  setMenu:self.menu];
-    [self.statusItem  setHighlightMode:YES];
-    [self.statusItem  setTitle:@"JSONFile"];
     
-    [self.windowRequest setLevel:NSNormalWindowLevel];
-    [self.windowConvert setLevel:NSNormalWindowLevel];
-    [self.windowJSON setLevel:NSNormalWindowLevel];
 }
 
--(IBAction)didPressedQuit:(id)sender
+- (NSMenu *)applicationDockMenu:(NSApplication *)sender
+{
+    return self.menu;
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    if (!flag){
+        [self.windowJSON makeKeyAndOrderFront:self];
+    }
+    return YES;
+}
+
+- (IBAction)didPressedQuit:(id)sender
 {
     exit(-1);
 }

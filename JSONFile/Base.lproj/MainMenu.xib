@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -43,10 +44,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="379" height="158"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="364" height="158"/>
+                                    <size key="minSize" width="379" height="158"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="364" height="158"/>
+                                    <size key="minSize" width="379" height="158"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -72,10 +73,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="379" height="128"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="364" height="128"/>
+                                    <size key="minSize" width="379" height="128"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="364" height="128"/>
+                                    <size key="minSize" width="379" height="128"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -92,6 +93,7 @@
                     </scrollView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="239" y="-77"/>
         </window>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="MAXAppDelegate">
@@ -111,7 +113,7 @@
                 <outlet property="txtvResponseOutput" destination="i8T-U0-22w" id="bfq-vA-Pfh"/>
             </connections>
         </customObject>
-        <window title="JSONFormat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="14o-s9-ULE">
+        <window title="JSONFormat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="14o-s9-ULE">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -155,10 +157,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="604" height="353"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="589" height="353"/>
+                                    <size key="minSize" width="604" height="353"/>
                                     <size key="maxSize" width="606" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="589" height="353"/>
+                                    <size key="minSize" width="604" height="353"/>
                                     <size key="maxSize" width="606" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -184,7 +186,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="384" y="395"/>
+            <point key="canvasLocation" x="297" y="77"/>
         </window>
         <window title="接口测试" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="YEg-nQ-MIk">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
@@ -217,10 +219,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="605" height="168"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="590" height="168"/>
+                                    <size key="minSize" width="605" height="168"/>
                                     <size key="maxSize" width="607" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="590" height="168"/>
+                                    <size key="minSize" width="605" height="168"/>
                                     <size key="maxSize" width="607" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -246,10 +248,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="605" height="218"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="590" height="218"/>
+                                    <size key="minSize" width="605" height="218"/>
                                     <size key="maxSize" width="607" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="590" height="218"/>
+                                    <size key="minSize" width="605" height="218"/>
                                     <size key="maxSize" width="607" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -360,44 +362,6 @@
                 <outlet property="txtvJSONOutput" destination="ccT-4b-D16" id="1Ji-O2-hwE"/>
             </connections>
         </customObject>
-        <menu id="6Kf-Wy-AUB">
-            <items>
-                <menuItem title="Unicode转码" id="Xvv-U0-bHQ">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="orderFront:" target="pgO-py-Yz2" id="xgf-vG-dBX"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="c17-Xl-G7F"/>
-                <menuItem title="接口测试" keyEquivalent="1" id="xub-5u-EUW">
-                    <modifierMask key="keyEquivalentModifierMask" option="YES"/>
-                    <connections>
-                        <action selector="orderFront:" target="YEg-nQ-MIk" id="vMb-1o-2FC"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="i2M-QD-9Mv"/>
-                <menuItem title="JSON格式化" keyEquivalent="2" id="YSM-Kc-J1J">
-                    <modifierMask key="keyEquivalentModifierMask" option="YES"/>
-                    <connections>
-                        <action selector="orderFront:" target="14o-s9-ULE" id="VG9-Sr-e8w"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="7ni-CQ-aDH"/>
-                <menuItem title="关于" id="ABK-bs-CFu">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="didPressedAlert:" target="SJB-pU-mH4" id="EMj-mg-Uok"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="y6X-dn-X2r"/>
-                <menuItem title="退出" id="ubB-rn-80g">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="didPressedQuit:" target="Voe-Tx-rLC" id="tjT-sc-CRm"/>
-                    </connections>
-                </menuItem>
-            </items>
-        </menu>
         <menu title="AMainMenu" systemMenu="main" id="Hub-Zv-M1c">
             <items>
                 <menuItem title="JSONFile" id="7sB-Gw-xIj">
@@ -405,22 +369,24 @@
                         <items>
                             <menuItem title="About JSONFile" id="JZf-Jw-lTr">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Col-8a-ZHj"/>
+                                </connections>
                             </menuItem>
-                            <menuItem title="Quit Random" keyEquivalent="q" id="s0v-T2-6nC"/>
-                        </items>
-                    </menu>
-                </menuItem>
-                <menuItem title="File" id="TQm-vC-Zys">
-                    <menu key="submenu" title="File" id="8Qo-je-jPQ">
-                        <items>
                             <menuItem title="Close" keyEquivalent="w" id="s3V-ip-llW">
                                 <connections>
                                     <action selector="performClose:" target="-1" id="xYb-TL-voR"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Quit JSONFile" keyEquivalent="q" id="s0v-T2-6nC">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="gZg-Lh-am8"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="File" id="TQm-vC-Zys"/>
                 <menuItem title="Edit" id="L5u-ZS-zrC">
                     <menu key="submenu" title="Edit" id="qoS-Ws-bcN">
                         <items>
@@ -491,6 +457,33 @@
                             <menuItem title="Bring All to Front" id="vMJ-tk-Q2g">
                                 <connections>
                                     <action selector="arrangeInFront:" target="-1" id="yE8-HV-Aph"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Tools" id="HKf-YW-aZ2" userLabel="Tools">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Tools" id="6Kf-Wy-AUB">
+                        <items>
+                            <menuItem title="Unicode转码" id="Xvv-U0-bHQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFront:" target="pgO-py-Yz2" id="xgf-vG-dBX"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="c17-Xl-G7F"/>
+                            <menuItem title="接口测试" keyEquivalent="1" id="xub-5u-EUW">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                <connections>
+                                    <action selector="orderFront:" target="YEg-nQ-MIk" id="vMb-1o-2FC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="i2M-QD-9Mv"/>
+                            <menuItem title="JSON格式化" keyEquivalent="2" id="YSM-Kc-J1J">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                <connections>
+                                    <action selector="orderFront:" target="14o-s9-ULE" id="VG9-Sr-e8w"/>
                                 </connections>
                             </menuItem>
                         </items>

@@ -6,15 +6,19 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E98BD619-1AFD-4EDC-AD77-BF15143D8E9E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JSONFile</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BEDED3A40BD1BC5912082D3EF76A1EC736A61BDC</key>
 		<string>https://github.com/maxfong/JSONFile.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JSONFile.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BEDED3A40BD1BC5912082D3EF76A1EC736A61BDC</key>
-		<string>JSONFile</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/maxfong/JSONFile.git</string>
